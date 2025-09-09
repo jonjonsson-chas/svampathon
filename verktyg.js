@@ -1,6 +1,6 @@
 // --- Väder ---
-const apiKey = "DIN_API_KEY"; // byt när nyckeln fungerar
-const city = "Stockholm";
+const apiKey = "2f8daf75377f0309c8fbc500b8e7e521"; // byt när nyckeln fungerar
+const city = "Malmö";
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=se`;
 
 fetch(weatherUrl)
