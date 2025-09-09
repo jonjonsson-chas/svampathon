@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Väder + Röstning</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .team { margin-bottom: 10px; }
+    button { margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1></h1>
+    <nav>
+      <a href="index.html">Hem</a>
+      <a href="team.html">Team</a>
+      <a href="verktyg.html">Verktyg</a>
+    </nav>
+  </header>
+  <!-- Väder -->
+  <h1>Väderinformation</h1>
+  <p id="weather">Hämtar väder...</p>
+
+  <!-- Röstning -->
+  <h1>Rösta på teamnamn!</h1>
+  <div id="teams">
+    <div class="team">
+      <span>Team Mango</span>
+      <button onclick="vote('mango')">Rösta</button>
+      <span id="mango-votes">0</span> röster
+    </div>
+    <div class="team">
+      <span>Team Banana</span>
+      <button onclick="vote('banana')">Rösta</button>
+      <span id="banana-votes">0</span> röster
+    </div>
+    <div class="team">
+      <span>Team Cherry</span>
+      <button onclick="vote('cherry')">Rösta</button>
+      <span id="cherry-votes">0</span> röster
+    </div>
+  </div>
+
+  <!-- Länk till en kombinerad JS-fil -->
+  <script src="verktyg.js"></script>
+</body>
+</html>
