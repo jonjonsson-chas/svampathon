@@ -1,9 +1,18 @@
 :root {
-      --bg: #1a181aff;
-      --text: #eee3c1ff;
+      --base-color: white;
+      --base-variant: #e8e9ed;
+      --text-color: #111528;
       --accent: #2563eb;
       --muted: #6b7280;
     }
+    .darkmode{
+     --base-color: #070b1d;
+     --base-variant: #101425;
+     --text-color: #ffffff;
+     --secondary-text: #a4a5b8;
+     --primary-color: #3a435d;
+     --accent-color: #0071ff;
+}
     * {
       margin: 0;
       padding: 0;
@@ -11,8 +20,8 @@
       font-family: system-ui, sans-serif;
     }
     body {
-      background: var(--bg);
-      color: var(--text);
+      background: var(--base-color);
+      color: var(--text-color);
       line-height: 1.6;
       padding: 2rem;
       max-width: 900px;
@@ -307,4 +316,50 @@ form.form textarea:focus {
 
 .slideshow-btn:hover {
   background: rgba(0,0,0,0.8);
+}
+.cta-button{
+  background-color: var(--accent-color);
+}
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+#theme-switch svg{
+  fill: var(--primary-color);
+}
+#theme-switch svg:last-child{
+  display: none;
+}
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
+}
+#scrollTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  font-size: 16px;
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#scrollTopBtn:hover {
+  background-color: #555;
 }
