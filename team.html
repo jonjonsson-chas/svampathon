@@ -28,26 +28,82 @@
   <div class="team-grid">
     <div class="card">
       <h3>Jon</h3>
-      <p>Frontend Developer</p>
+      <p>Cybersäkerhetstekniker</p>
     </div>
     <div class="card">
       <h3>Wilma</h3>
-      <p>Backend Specialist</p>
+      <p>Cybersäkerhetstekniker</p>
     </div>
     <div class="card">
       <h3>Joon</h3>
-      <p>Designer</p>
+      <p>Cybersäkerhetstekniker</p>
     </div>
     <div class="card">
       <h3>Mohamad</h3>
-      <p>Project Manager</p>
+      <p>Cybersäkerhetstekniker</p>
     </div>
     <div class="card">
       <h3>Adam</h3>
-      <p>DevOps</p>
+      <p>Cybersäkerhetstekniker</p>
     </div>
   </div>
 </section>
+
+<section id="slideshow-section">
+  <div class="slideshow">
+    <img src="Sentiel1.jpg" class="active" alt="Slideshow image 1">
+    <img src="Orange.png" alt="Slideshow image 2">
+    <img src="Fortinet.webp" alt="Slideshow image 3">
+
+    <div class="controls">
+      <button id="slideshow-prev" class="slideshow-btn" onclick="prevSlide()">⟨ Prev</button>
+      <button id="slideshow-next" class="slideshow-btn" onclick="nextSlide()">Next ⟩</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  let slides = document.querySelectorAll(".slideshow img");
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) slide.classList.add("active");
+    });
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+
+  // Auto-slide every 3 seconds
+  setInterval(nextSlide, 3000);
+</script>
+
+
+<aside>
+<section id="question">
+  <div class="card form-card">
+    <h2>Har du en fråga?</h2>
+    <form action="/skicka" method="post" class="form">
+      <label for="fraga">Har du funderingar eller frågor?</label>
+      <textarea id="fraga" name="fraga" placeholder="Skriv din fråga här..." required></textarea>
+      <div class="form-actions">
+        <button type="submit" class="btn">Skicka</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</aside>
+
 
 <footer>
     <span>Kontakta oss: <a href="Wilma.kylvag@chasacademy.se">Wilma</a>
